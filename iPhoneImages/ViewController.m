@@ -30,20 +30,15 @@
 
 - (IBAction)randomizeImage:(UIButton *)sender {
     
-    NSURL *url = [NSURL URLWithString:@"https://i.imgur.com/y9MIaCS.png"];
-    
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     configuration.waitsForConnectivity = YES;
     configuration.allowsCellularAccess = NO;
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
     
-    
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    
     // change url
     
-    request = [self changeiPhoneImage];
+    NSMutableURLRequest *request = [self changeiPhoneImage];
     request.HTTPMethod = @"GET";
     
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
