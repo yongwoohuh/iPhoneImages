@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Random iPhone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EmE-fb-8xm">
+                                <rect key="frame" x="127" y="20" width="121" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgT-ji-2eK">
+                                <rect key="frame" x="149" y="595" width="76" height="30"/>
+                                <state key="normal" title="Randomize"/>
+                                <connections>
+                                    <action selector="randomizeImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hG6-Pl-WQh"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QIB-W4-2DW" userLabel="iPhoneImageView">
+                                <rect key="frame" x="20" y="80" width="335" height="507"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QIB-W4-2DW" secondAttribute="trailing" constant="20" id="AUb-4p-31P"/>
+                            <constraint firstItem="EmE-fb-8xm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="MrV-hV-D2M"/>
+                            <constraint firstItem="QIB-W4-2DW" firstAttribute="top" secondItem="EmE-fb-8xm" secondAttribute="bottom" constant="39.5" id="NG1-Wm-nb6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dgT-ji-2eK" secondAttribute="bottom" constant="42" id="NGC-Fp-vWI"/>
+                            <constraint firstItem="EmE-fb-8xm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Yjc-PG-hzm"/>
+                            <constraint firstItem="QIB-W4-2DW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="boR-bq-oE5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EmE-fb-8xm" secondAttribute="trailing" constant="127" id="dqM-g4-wA6"/>
+                            <constraint firstItem="QIB-W4-2DW" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-10" id="hHW-9H-t2P"/>
+                            <constraint firstItem="dgT-ji-2eK" firstAttribute="top" secondItem="QIB-W4-2DW" secondAttribute="bottom" constant="8" id="iuA-2a-tco"/>
+                            <constraint firstItem="QIB-W4-2DW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="nrj-Yr-5ag"/>
+                            <constraint firstItem="dgT-ji-2eK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wnn-uz-nlX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="iPhoneImageView" destination="QIB-W4-2DW" id="Oic-Tg-2Vd"/>
+                        <outlet property="randomizeButton" destination="dgT-ji-2eK" id="SDB-O3-SaM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="30.134932533733135"/>
+        </scene>
+    </scenes>
+</document>
